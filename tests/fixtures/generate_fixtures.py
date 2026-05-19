@@ -132,7 +132,7 @@ def text_row(values: list[Any], types: list[str]) -> etree._Element:
     """
     row = etree.Element(f"{SS}Row")
     pending_gap = False
-    for i, (v, t) in enumerate(zip(values, types), start=1):
+    for i, (v, t) in enumerate(zip(values, types, strict=True), start=1):
         if v is None:
             pending_gap = True
             continue
