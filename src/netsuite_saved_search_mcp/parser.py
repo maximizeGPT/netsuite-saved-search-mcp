@@ -490,8 +490,8 @@ class NetSuiteExport:
             bucket = groups[key]
             result: dict[str, Any] = dict(zip(group_by, key, strict=True))
             for m in measures:
-                alias = m.alias or f"{m.function}_{m.column}"
-                result[alias] = _apply_measure(m.function, m.column, bucket)
+                alias = m.alias or f"{m.op}_{m.column}"
+                result[alias] = _apply_measure(m.op, m.column, bucket)
             out.append(result)
         return out
 
@@ -570,7 +570,7 @@ Predicate = Annotated[
 class Measure(BaseModel):
     model_config = {"frozen": True, "extra": "forbid"}
     column: str
-    function: Literal["sum", "count", "avg", "min", "max"]
+    op: Literal["sum", "count", "avg", "min", "max"]
     alias: str | None = None
 
 

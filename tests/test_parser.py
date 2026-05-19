@@ -629,7 +629,7 @@ def test_aggregate_sum_by_account(gl_export_path: Path) -> None:
     export = NetSuiteExport(gl_export_path)
     groups = export.aggregate(
         group_by=["Account"],
-        measures=[Measure(column="Amount", function="sum", alias="total")],
+        measures=[Measure(column="Amount", op="sum", alias="total")],
     )
     # 6 distinct accounts in the fixture.
     accounts = {g["Account"] for g in groups}
@@ -646,10 +646,10 @@ def test_aggregate_count_avg_min_max(gl_export_path: Path) -> None:
     groups = export.aggregate(
         group_by=["Order Type"],
         measures=[
-            Measure(column="Amount", function="count"),
-            Measure(column="Amount", function="avg"),
-            Measure(column="Amount", function="min"),
-            Measure(column="Amount", function="max"),
+            Measure(column="Amount", op="count"),
+            Measure(column="Amount", op="avg"),
+            Measure(column="Amount", op="min"),
+            Measure(column="Amount", op="max"),
         ],
     )
     assert groups
@@ -662,7 +662,7 @@ def test_aggregate_multi_column_group_by(gl_export_path: Path) -> None:
     export = NetSuiteExport(gl_export_path)
     groups = export.aggregate(
         group_by=["Order Type", "Account"],
-        measures=[Measure(column="Amount", function="sum", alias="total")],
+        measures=[Measure(column="Amount", op="sum", alias="total")],
     )
     assert groups
     # Each group key (Order Type, Account) is unique.
@@ -675,7 +675,7 @@ def test_aggregate_unknown_group_by_column_raises(gl_export_path: Path) -> None:
     with pytest.raises(ColumnNotFoundError) as exc:
         export.aggregate(
             group_by=["Acount"],
-            measures=[Measure(column="Amount", function="sum")],
+            measures=[Measure(column="Amount", op="sum")],
         )
     assert "group_by column" in str(exc.value)
 
@@ -685,7 +685,7 @@ def test_aggregate_unknown_measure_column_raises(gl_export_path: Path) -> None:
     with pytest.raises(ColumnNotFoundError):
         export.aggregate(
             group_by=["Account"],
-            measures=[Measure(column="Amout", function="sum")],
+            measures=[Measure(column="Amout", op="sum")],
         )
 
 
