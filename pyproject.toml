@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "netsuite-saved-search-mcp"
-version = "0.1.0"
+version = "0.1.1"
 description = "MCP server exposing NetSuite saved search exports as a structured query interface for Claude"
 readme = "README.md"
 requires-python = ">=3.12"

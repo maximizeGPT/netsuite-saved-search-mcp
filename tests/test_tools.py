@@ -595,3 +595,36 @@ def test_get_parse_warnings_malformed_fixture(root: Path) -> None:
 def test_get_parse_warnings_file_not_found(root: Path) -> None:
     with pytest.raises(ExportNotFoundError):
         get_parse_warnings("nope.xls")
+
+
+def test_get_parse_warnings_isolates_by_file_path(root: Path) -> None:
+    # Two files in the same session must return independent warning lists,
+    # not whichever was touched most recently.
+    clean = get_parse_warnings("sample_gl_export.xls")
+    dirty = get_parse_warnings("sample_malformed.xls")
+    assert clean == []
+    assert sorted(w.kind for w in dirty) == [
+        "bad_datetime", "encoding_recovery", "phantom_column",
+    ]
+    # Round-trip — querying the clean file again after the dirty one must
+    # still produce its (empty) list, not leak the dirty file's warnings.
+    assert get_parse_warnings("sample_gl_export.xls") == []
+
+
+def test_get_parse_warnings_parses_on_demand_if_uncached(
+    root: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    # Fresh cache, no prior parse: get_parse_warnings must trigger one.
+    clear_cache()
+    counter = {"n": 0}
+    real_init = parser_mod.NetSuiteExport.__init__
+
+    def counting_init(self: parser_mod.NetSuiteExport, *args: Any, **kwargs: Any) -> None:
+        counter["n"] += 1
+        real_init(self, *args, **kwargs)
+
+    monkeypatch.setattr(parser_mod.NetSuiteExport, "__init__", counting_init)
+
+    warnings = get_parse_warnings("sample_malformed.xls")
+    assert counter["n"] == 1
+    assert len(warnings) == 3

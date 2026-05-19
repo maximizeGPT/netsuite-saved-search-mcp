@@ -307,7 +307,12 @@ def categorize_by_memo(
 # ---------------------------------------------------------------------------
 
 def get_parse_warnings(file_path: str) -> list[ParseWarning]:
-    """Return the parse warnings captured from the most recent parse."""
+    """Return the parse warnings captured during parsing of `file_path`.
+
+    Parses the file on demand if it isn't already cached, so each call
+    is scoped to its argument regardless of which exports were touched
+    earlier in the session.
+    """
     path = _resolve_file(file_path)
     export = _get_export(path)
     return list(export.parse_warnings)

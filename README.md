@@ -51,7 +51,7 @@ NetSuite saved search exports use XML SpreadsheetML, not Excel binary, despite t
 | `aggregate_export` | Group rows by one or more columns; compute sum/count/avg/min/max per group. | `file_path, group_by, measures` |
 | `categorize_by_memo` | Tag every row with a `_category` derived from case-insensitive keyword rules across one or more memo columns. | `file_path, memo_columns, rules` |
 | `detect_anomalies` | Three checks: zero-activity periods (HIGH), ratio anomalies (MEDIUM), document-count variance (MEDIUM). | `file_path, account_column, amount_column, period_column` |
-| `get_parse_warnings` | Return parse warnings (phantom_column, bad_datetime, encoding_recovery, empty_row_skipped) captured during the most recent parse. | `file_path` |
+| `get_parse_warnings` | Return parse warnings (phantom_column, bad_datetime, encoding_recovery, empty_row_skipped) captured during parsing of the specified file. | `file_path` |
 
 Predicates are a discriminated union keyed on `op`. Example query with two predicates:
 

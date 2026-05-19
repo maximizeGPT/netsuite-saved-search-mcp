@@ -111,13 +111,14 @@ _TOOL_DESCRIPTIONS: dict[str, str] = {
         "'2024-01'."
     ),
     "get_parse_warnings": (
-        "Return the parse warnings captured during the most recent parse of a "
-        "NetSuite export. Warning kinds: phantom_column (cell at a column "
-        "index beyond the header count), bad_datetime (DateTime cell that "
-        "wouldn't parse — raw string is preserved in the row), "
-        "encoding_recovery (lxml had to recover from invalid XML), "
-        "empty_row_skipped. Use this after any other tool reports a non-zero "
-        "warning_count to see exactly which rows are affected."
+        "Return the parse warnings for the export at `file_path`, parsing "
+        "it on demand if it isn't already cached. Warning kinds: "
+        "phantom_column (cell at a column index beyond the header count), "
+        "bad_datetime (DateTime cell that wouldn't parse — raw string is "
+        "preserved in the row), encoding_recovery (lxml had to recover "
+        "from invalid XML), empty_row_skipped. Call this after any other "
+        "tool reports a non-zero warning_count to see exactly which rows "
+        "are affected."
     ),
 }
 
