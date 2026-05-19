@@ -198,6 +198,32 @@ def test_list_exports_traversal_rejected(root: Path) -> None:
         list_exports("../..")
 
 
+def test_list_exports_valid_files_have_no_parse_error(root: Path) -> None:
+    # Sanity: parse_error stays None for files that lxml can recover.
+    summaries = list_exports(".")
+    for s in summaries:
+        assert s.parse_error is None, f"unexpected parse_error on {s.filename}"
+
+
+def test_list_exports_unparseable_file_records_error(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    # Drop a truly unparseable file (raw bytes, no XML prologue) into an
+    # isolated working root and confirm ExportSummary.parse_error surfaces.
+    bad = tmp_path / "sample_unparseable.xls"
+    bad.write_bytes(b"\x00\x01\x02 not xml at all")
+    monkeypatch.setenv("NSMCP_ROOT", str(tmp_path))
+
+    summaries = list_exports(".")
+    entry = next(s for s in summaries if s.filename == "sample_unparseable.xls")
+    assert entry.parse_error is not None
+    assert entry.row_count is None
+    assert entry.header_count is None
+    assert entry.header_row is None
+    assert entry.warning_count is None
+    assert entry.date_range is None
+
+
 # ===========================================================================
 # Tool 2 — get_headers.
 # ===========================================================================
