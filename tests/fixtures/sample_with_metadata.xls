@@ -1,0 +1,455 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">
+  <Worksheet ss:Name="Sheet1">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">Saved Search: Quarterly Pipeline by Stage</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">Generated: 2024-12-31 10:30:00 PST</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">User: Alex Rivera</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">Filter: Close Date in current fiscal year</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">Sort: Close Date ascending</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">Records: 50</Data></Cell>
+      </Row>
+      <Row/>
+      <Row>
+        <Cell><Data ss:Type="String">Stage Distribution:</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">Prospecting: 9</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">Qualification: 8</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">Proposal: 9</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">Negotiation: 8</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">Closed Won: 8</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">Closed Lost: 8</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">Opportunity ID</Data></Cell>
+        <Cell><Data ss:Type="String">Account Name</Data></Cell>
+        <Cell><Data ss:Type="String">Close Date</Data></Cell>
+        <Cell><Data ss:Type="String">Amount</Data></Cell>
+        <Cell><Data ss:Type="String">Stage</Data></Cell>
+        <Cell><Data ss:Type="String">Owner</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00001</Data></Cell>
+        <Cell><Data ss:Type="String">PartnerCo Inc.</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-06-17T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">422544.01</Data></Cell>
+        <Cell><Data ss:Type="String">Negotiation</Data></Cell>
+        <Cell><Data ss:Type="String">Sam Patel</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00002</Data></Cell>
+        <Cell><Data ss:Type="String">PartnerCo Inc.</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-06-26T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">105103.97</Data></Cell>
+        <Cell><Data ss:Type="String">Proposal</Data></Cell>
+        <Cell><Data ss:Type="String">Alex Rivera</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00003</Data></Cell>
+        <Cell><Data ss:Type="String">Global Solutions LLC</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-01-12T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">173319.04</Data></Cell>
+        <Cell><Data ss:Type="String">Qualification</Data></Cell>
+        <Cell><Data ss:Type="String">Sam Patel</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00004</Data></Cell>
+        <Cell><Data ss:Type="String">Global Solutions LLC</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-07-15T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">9175.48</Data></Cell>
+        <Cell><Data ss:Type="String">Proposal</Data></Cell>
+        <Cell><Data ss:Type="String">Jordan Kim</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00005</Data></Cell>
+        <Cell><Data ss:Type="String">Global Solutions LLC</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-08-20T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">83555.08</Data></Cell>
+        <Cell><Data ss:Type="String">Negotiation</Data></Cell>
+        <Cell><Data ss:Type="String">Sam Patel</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00006</Data></Cell>
+        <Cell><Data ss:Type="String">PartnerCo Inc.</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-03-19T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">154508.13</Data></Cell>
+        <Cell><Data ss:Type="String">Closed Won</Data></Cell>
+        <Cell><Data ss:Type="String">Sam Patel</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00007</Data></Cell>
+        <Cell><Data ss:Type="String">Sunrise Ventures</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-11-07T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">308954.73</Data></Cell>
+        <Cell><Data ss:Type="String">Proposal</Data></Cell>
+        <Cell><Data ss:Type="String">Alex Rivera</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00008</Data></Cell>
+        <Cell><Data ss:Type="String">NorthStar Ltd.</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-09-29T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">137279.41</Data></Cell>
+        <Cell><Data ss:Type="String">Prospecting</Data></Cell>
+        <Cell><Data ss:Type="String">Jordan Kim</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00009</Data></Cell>
+        <Cell><Data ss:Type="String">Global Solutions LLC</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-12-31T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">34062.23</Data></Cell>
+        <Cell><Data ss:Type="String">Qualification</Data></Cell>
+        <Cell><Data ss:Type="String">Sam Patel</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00010</Data></Cell>
+        <Cell><Data ss:Type="String">NorthStar Ltd.</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-09-25T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">452675.72</Data></Cell>
+        <Cell><Data ss:Type="String">Negotiation</Data></Cell>
+        <Cell><Data ss:Type="String">Jordan Kim</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00011</Data></Cell>
+        <Cell><Data ss:Type="String">PartnerCo Inc.</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-06-05T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">148530.95</Data></Cell>
+        <Cell><Data ss:Type="String">Closed Won</Data></Cell>
+        <Cell><Data ss:Type="String">Sam Patel</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00012</Data></Cell>
+        <Cell><Data ss:Type="String">NorthStar Ltd.</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-11-10T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">273493.67</Data></Cell>
+        <Cell><Data ss:Type="String">Closed Won</Data></Cell>
+        <Cell><Data ss:Type="String">Alex Rivera</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00013</Data></Cell>
+        <Cell><Data ss:Type="String">Global Solutions LLC</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-04-12T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">329836.91</Data></Cell>
+        <Cell><Data ss:Type="String">Qualification</Data></Cell>
+        <Cell><Data ss:Type="String">Sam Patel</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00014</Data></Cell>
+        <Cell><Data ss:Type="String">Sunrise Ventures</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-03-23T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">132717.72</Data></Cell>
+        <Cell><Data ss:Type="String">Proposal</Data></Cell>
+        <Cell><Data ss:Type="String">Jordan Kim</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00015</Data></Cell>
+        <Cell><Data ss:Type="String">Sunrise Ventures</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-06-03T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">348221.28</Data></Cell>
+        <Cell><Data ss:Type="String">Negotiation</Data></Cell>
+        <Cell><Data ss:Type="String">Jordan Kim</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00016</Data></Cell>
+        <Cell><Data ss:Type="String">Acme Corp</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-07-14T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">374587.96</Data></Cell>
+        <Cell><Data ss:Type="String">Closed Won</Data></Cell>
+        <Cell><Data ss:Type="String">Jordan Kim</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00017</Data></Cell>
+        <Cell><Data ss:Type="String">Acme Corp</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-11-16T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">234095.17</Data></Cell>
+        <Cell><Data ss:Type="String">Closed Won</Data></Cell>
+        <Cell><Data ss:Type="String">Sam Patel</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00018</Data></Cell>
+        <Cell><Data ss:Type="String">PartnerCo Inc.</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-09-11T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">163235.89</Data></Cell>
+        <Cell><Data ss:Type="String">Negotiation</Data></Cell>
+        <Cell><Data ss:Type="String">Sam Patel</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00019</Data></Cell>
+        <Cell><Data ss:Type="String">PartnerCo Inc.</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-05-10T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">156273.19</Data></Cell>
+        <Cell><Data ss:Type="String">Proposal</Data></Cell>
+        <Cell><Data ss:Type="String">Sam Patel</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00020</Data></Cell>
+        <Cell><Data ss:Type="String">Global Solutions LLC</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-08-18T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">68093.78</Data></Cell>
+        <Cell><Data ss:Type="String">Proposal</Data></Cell>
+        <Cell><Data ss:Type="String">Jordan Kim</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00021</Data></Cell>
+        <Cell><Data ss:Type="String">Acme Corp</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-11-03T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">307494.46</Data></Cell>
+        <Cell><Data ss:Type="String">Closed Won</Data></Cell>
+        <Cell><Data ss:Type="String">Sam Patel</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00022</Data></Cell>
+        <Cell><Data ss:Type="String">Acme Corp</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-02-26T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">170108.83</Data></Cell>
+        <Cell><Data ss:Type="String">Closed Lost</Data></Cell>
+        <Cell><Data ss:Type="String">Sam Patel</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00023</Data></Cell>
+        <Cell><Data ss:Type="String">NorthStar Ltd.</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-12-16T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">321144.63</Data></Cell>
+        <Cell><Data ss:Type="String">Proposal</Data></Cell>
+        <Cell><Data ss:Type="String">Alex Rivera</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00024</Data></Cell>
+        <Cell><Data ss:Type="String">Sunrise Ventures</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-01-28T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">79895.22</Data></Cell>
+        <Cell><Data ss:Type="String">Proposal</Data></Cell>
+        <Cell><Data ss:Type="String">Sam Patel</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00025</Data></Cell>
+        <Cell><Data ss:Type="String">Global Solutions LLC</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-10-28T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">39158.35</Data></Cell>
+        <Cell><Data ss:Type="String">Prospecting</Data></Cell>
+        <Cell><Data ss:Type="String">Jordan Kim</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00026</Data></Cell>
+        <Cell><Data ss:Type="String">Global Solutions LLC</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-06-01T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">257862.12</Data></Cell>
+        <Cell><Data ss:Type="String">Closed Won</Data></Cell>
+        <Cell><Data ss:Type="String">Jordan Kim</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00027</Data></Cell>
+        <Cell><Data ss:Type="String">PartnerCo Inc.</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-05-16T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">360861.47</Data></Cell>
+        <Cell><Data ss:Type="String">Closed Won</Data></Cell>
+        <Cell><Data ss:Type="String">Jordan Kim</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00028</Data></Cell>
+        <Cell><Data ss:Type="String">Global Solutions LLC</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-08-15T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">339241.09</Data></Cell>
+        <Cell><Data ss:Type="String">Qualification</Data></Cell>
+        <Cell><Data ss:Type="String">Jordan Kim</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00029</Data></Cell>
+        <Cell><Data ss:Type="String">Acme Corp</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-03-06T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">122696.11</Data></Cell>
+        <Cell><Data ss:Type="String">Qualification</Data></Cell>
+        <Cell><Data ss:Type="String">Jordan Kim</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00030</Data></Cell>
+        <Cell><Data ss:Type="String">Acme Corp</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-08-04T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">166640.62</Data></Cell>
+        <Cell><Data ss:Type="String">Negotiation</Data></Cell>
+        <Cell><Data ss:Type="String">Sam Patel</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00031</Data></Cell>
+        <Cell><Data ss:Type="String">NorthStar Ltd.</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-07-08T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">192271.64</Data></Cell>
+        <Cell><Data ss:Type="String">Qualification</Data></Cell>
+        <Cell><Data ss:Type="String">Alex Rivera</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00032</Data></Cell>
+        <Cell><Data ss:Type="String">Global Solutions LLC</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-08-07T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">132260.63</Data></Cell>
+        <Cell><Data ss:Type="String">Prospecting</Data></Cell>
+        <Cell><Data ss:Type="String">Sam Patel</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00033</Data></Cell>
+        <Cell><Data ss:Type="String">Acme Corp</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-02-21T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">303424.53</Data></Cell>
+        <Cell><Data ss:Type="String">Qualification</Data></Cell>
+        <Cell><Data ss:Type="String">Jordan Kim</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00034</Data></Cell>
+        <Cell><Data ss:Type="String">NorthStar Ltd.</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-09-17T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">289883.5</Data></Cell>
+        <Cell><Data ss:Type="String">Closed Lost</Data></Cell>
+        <Cell><Data ss:Type="String">Alex Rivera</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00035</Data></Cell>
+        <Cell><Data ss:Type="String">Sunrise Ventures</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-01-04T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">335130.21</Data></Cell>
+        <Cell><Data ss:Type="String">Negotiation</Data></Cell>
+        <Cell><Data ss:Type="String">Sam Patel</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00036</Data></Cell>
+        <Cell><Data ss:Type="String">Global Solutions LLC</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-02-21T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">110224.69</Data></Cell>
+        <Cell><Data ss:Type="String">Closed Lost</Data></Cell>
+        <Cell><Data ss:Type="String">Alex Rivera</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00037</Data></Cell>
+        <Cell><Data ss:Type="String">PartnerCo Inc.</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-11-19T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">192079.0</Data></Cell>
+        <Cell><Data ss:Type="String">Qualification</Data></Cell>
+        <Cell><Data ss:Type="String">Alex Rivera</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00038</Data></Cell>
+        <Cell><Data ss:Type="String">Global Solutions LLC</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-07-26T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">436856.37</Data></Cell>
+        <Cell><Data ss:Type="String">Closed Won</Data></Cell>
+        <Cell><Data ss:Type="String">Jordan Kim</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00039</Data></Cell>
+        <Cell><Data ss:Type="String">Acme Corp</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-06-09T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">460632.37</Data></Cell>
+        <Cell><Data ss:Type="String">Proposal</Data></Cell>
+        <Cell><Data ss:Type="String">Jordan Kim</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00040</Data></Cell>
+        <Cell><Data ss:Type="String">NorthStar Ltd.</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-05-22T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">44730.69</Data></Cell>
+        <Cell><Data ss:Type="String">Qualification</Data></Cell>
+        <Cell><Data ss:Type="String">Alex Rivera</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00041</Data></Cell>
+        <Cell><Data ss:Type="String">Global Solutions LLC</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-03-09T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">361239.3</Data></Cell>
+        <Cell><Data ss:Type="String">Negotiation</Data></Cell>
+        <Cell><Data ss:Type="String">Alex Rivera</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00042</Data></Cell>
+        <Cell><Data ss:Type="String">Acme Corp</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-02-21T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">195467.67</Data></Cell>
+        <Cell><Data ss:Type="String">Proposal</Data></Cell>
+        <Cell><Data ss:Type="String">Sam Patel</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00043</Data></Cell>
+        <Cell><Data ss:Type="String">Sunrise Ventures</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-06-08T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">333211.29</Data></Cell>
+        <Cell><Data ss:Type="String">Closed Won</Data></Cell>
+        <Cell><Data ss:Type="String">Alex Rivera</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00044</Data></Cell>
+        <Cell><Data ss:Type="String">Sunrise Ventures</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-07-09T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">231569.23</Data></Cell>
+        <Cell><Data ss:Type="String">Closed Won</Data></Cell>
+        <Cell><Data ss:Type="String">Jordan Kim</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00045</Data></Cell>
+        <Cell><Data ss:Type="String">NorthStar Ltd.</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-08-26T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">495015.14</Data></Cell>
+        <Cell><Data ss:Type="String">Proposal</Data></Cell>
+        <Cell><Data ss:Type="String">Alex Rivera</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00046</Data></Cell>
+        <Cell><Data ss:Type="String">Global Solutions LLC</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-01-01T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">119292.02</Data></Cell>
+        <Cell><Data ss:Type="String">Negotiation</Data></Cell>
+        <Cell><Data ss:Type="String">Alex Rivera</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00047</Data></Cell>
+        <Cell><Data ss:Type="String">Sunrise Ventures</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-04-19T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">371319.13</Data></Cell>
+        <Cell><Data ss:Type="String">Closed Lost</Data></Cell>
+        <Cell><Data ss:Type="String">Sam Patel</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00048</Data></Cell>
+        <Cell><Data ss:Type="String">Acme Corp</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-08-31T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">494432.26</Data></Cell>
+        <Cell><Data ss:Type="String">Closed Won</Data></Cell>
+        <Cell><Data ss:Type="String">Jordan Kim</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00049</Data></Cell>
+        <Cell><Data ss:Type="String">Sunrise Ventures</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-04-02T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">389453.86</Data></Cell>
+        <Cell><Data ss:Type="String">Closed Lost</Data></Cell>
+        <Cell><Data ss:Type="String">Jordan Kim</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">OPP-00050</Data></Cell>
+        <Cell><Data ss:Type="String">Global Solutions LLC</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-05-07T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="Number">138206.55</Data></Cell>
+        <Cell><Data ss:Type="String">Closed Lost</Data></Cell>
+        <Cell><Data ss:Type="String">Alex Rivera</Data></Cell>
+      </Row>
+    </Table>
+  </Worksheet>
+</Workbook>

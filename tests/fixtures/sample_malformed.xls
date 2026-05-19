@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">
+  <Worksheet ss:Name="Sheet1">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">Order Type</Data></Cell>
+        <Cell><Data ss:Type="String">Date</Data></Cell>
+        <Cell><Data ss:Type="String">Period</Data></Cell>
+        <Cell><Data ss:Type="String">Type</Data></Cell>
+        <Cell><Data ss:Type="String">Document Number</Data></Cell>
+        <Cell><Data ss:Type="String">Name</Data></Cell>
+        <Cell><Data ss:Type="String">Memo (main)</Data></Cell>
+        <Cell><Data ss:Type="String">Account</Data></Cell>
+        <Cell><Data ss:Type="String">Memo (line)</Data></Cell>
+        <Cell><Data ss:Type="String">Amount</Data></Cell>
+        <Cell><Data ss:Type="String">Created By</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">Journal</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-01-08T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="String">Jan 2024</Data></Cell>
+        <Cell><Data ss:Type="String">Standard</Data></Cell>
+        <Cell><Data ss:Type="String">JE-4551</Data></Cell>
+        <Cell><Data ss:Type="String">PartnerCo Inc.</Data></Cell>
+        <Cell><Data ss:Type="String">Standard reclass entry</Data></Cell>
+        <Cell><Data ss:Type="String">1500</Data></Cell>
+        <Cell><Data ss:Type="String">line detail</Data></Cell>
+        <Cell><Data ss:Type="Number">3492.17</Data></Cell>
+        <Cell><Data ss:Type="String">Alex Rivera</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">Journal</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-01-15T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="String">Jan 2024</Data></Cell>
+        <Cell><Data ss:Type="String">Standard</Data></Cell>
+        <Cell><Data ss:Type="String">JE-3608</Data></Cell>
+        <Cell><Data ss:Type="String">PartnerCo Inc.</Data></Cell>
+        <Cell><Data ss:Type="String">Standard reclass entry</Data></Cell>
+        <Cell><Data ss:Type="String">1200</Data></Cell>
+        <Cell><Data ss:Type="String">line detail</Data></Cell>
+        <Cell><Data ss:Type="Number">6604.77</Data></Cell>
+        <Cell><Data ss:Type="String">Sam Patel</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">Journal</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-01-22T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="String">Jan 2024</Data></Cell>
+        <Cell><Data ss:Type="String">Standard</Data></Cell>
+        <Cell><Data ss:Type="String">JE-7442</Data></Cell>
+        <Cell><Data ss:Type="String">Smith & Co</Data></Cell>
+        <Cell><Data ss:Type="String">Standard reclass entry</Data></Cell>
+        <Cell><Data ss:Type="String">2010</Data></Cell>
+        <Cell><Data ss:Type="String">line detail</Data></Cell>
+        <Cell><Data ss:Type="Number">1699.71</Data></Cell>
+        <Cell><Data ss:Type="String">Alex Rivera</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">Bill</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-01-29T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="String">Jan 2024</Data></Cell>
+        <Cell><Data ss:Type="String">Standard</Data></Cell>
+        <Cell><Data ss:Type="String">BILL-7145</Data></Cell>
+        <Cell><Data ss:Type="String">Global Solutions LLC</Data></Cell>
+        <Cell><Data ss:Type="String">Standard reclass entry</Data></Cell>
+        <Cell><Data ss:Type="String">2010</Data></Cell>
+        <Cell><Data ss:Type="String">line detail</Data></Cell>
+        <Cell><Data ss:Type="Number">7637.07</Data></Cell>
+        <Cell><Data ss:Type="String">Alex Rivera</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">Invoice</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-02-05T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="String">Feb 2024</Data></Cell>
+        <Cell><Data ss:Type="String">Standard</Data></Cell>
+        <Cell><Data ss:Type="String">INV-3299</Data></Cell>
+        <Cell><Data ss:Type="String">NorthStar Ltd.</Data></Cell>
+        <Cell><Data ss:Type="String">Standard reclass entry</Data></Cell>
+        <Cell><Data ss:Type="String">4000</Data></Cell>
+        <Cell><Data ss:Type="String">line detail</Data></Cell>
+        <Cell><Data ss:Type="Number">3269.73</Data></Cell>
+        <Cell><Data ss:Type="String">Alex Rivera</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">Bill</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-02-12T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="String">Feb 2024</Data></Cell>
+        <Cell><Data ss:Type="String">Standard</Data></Cell>
+        <Cell><Data ss:Type="String">BILL-8002</Data></Cell>
+        <Cell><Data ss:Type="String">Global Solutions LLC</Data></Cell>
+        <Cell><Data ss:Type="String">Standard reclass entry</Data></Cell>
+        <Cell><Data ss:Type="String">1500</Data></Cell>
+        <Cell><Data ss:Type="String">line detail</Data></Cell>
+        <Cell><Data ss:Type="Number">2802.34</Data></Cell>
+        <Cell><Data ss:Type="String">Jordan Kim</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">Credit Memo</Data></Cell>
+        <Cell><Data ss:Type="DateTime">not-a-date</Data></Cell>
+        <Cell><Data ss:Type="String">Feb 2024</Data></Cell>
+        <Cell><Data ss:Type="String">Standard</Data></Cell>
+        <Cell><Data ss:Type="String">CM-6104</Data></Cell>
+        <Cell><Data ss:Type="String">Global Solutions LLC</Data></Cell>
+        <Cell><Data ss:Type="String">Standard reclass entry</Data></Cell>
+        <Cell><Data ss:Type="String">1200</Data></Cell>
+        <Cell><Data ss:Type="String">line detail</Data></Cell>
+        <Cell><Data ss:Type="Number">5281.4</Data></Cell>
+        <Cell><Data ss:Type="String">Sam Patel</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">Invoice</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-02-26T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="String">Feb 2024</Data></Cell>
+        <Cell><Data ss:Type="String">Standard</Data></Cell>
+        <Cell><Data ss:Type="String">INV-8792</Data></Cell>
+        <Cell><Data ss:Type="String">PartnerCo Inc.</Data></Cell>
+        <Cell><Data ss:Type="String">Standard reclass entry</Data></Cell>
+        <Cell><Data ss:Type="String">1010</Data></Cell>
+        <Cell><Data ss:Type="String">line detail</Data></Cell>
+        <Cell><Data ss:Type="Number">6945.37</Data></Cell>
+        <Cell><Data ss:Type="String">Jordan Kim</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">Invoice</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-03-04T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="String">Mar 2024</Data></Cell>
+        <Cell><Data ss:Type="String">Standard</Data></Cell>
+        <Cell><Data ss:Type="String">INV-1367</Data></Cell>
+        <Cell><Data ss:Type="String">PartnerCo Inc.</Data></Cell>
+        <Cell><Data ss:Type="String">Standard reclass entry</Data></Cell>
+        <Cell><Data ss:Type="String">1500</Data></Cell>
+        <Cell><Data ss:Type="String">line detail</Data></Cell>
+        <Cell><Data ss:Type="Number">5461.81</Data></Cell>
+        <Cell><Data ss:Type="String">Jordan Kim</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">Invoice</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-03-11T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="String">Mar 2024</Data></Cell>
+        <Cell><Data ss:Type="String">Standard</Data></Cell>
+        <Cell><Data ss:Type="String">INV-1960</Data></Cell>
+        <Cell><Data ss:Type="String">Sunrise Ventures</Data></Cell>
+        <Cell><Data ss:Type="String">Standard reclass entry</Data></Cell>
+        <Cell><Data ss:Type="String">1500</Data></Cell>
+        <Cell><Data ss:Type="String">line detail</Data></Cell>
+        <Cell><Data ss:Type="Number">8979.13</Data></Cell>
+        <Cell><Data ss:Type="String">Alex Rivera</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">Bill</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-03-18T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="String">Mar 2024</Data></Cell>
+        <Cell><Data ss:Type="String">Standard</Data></Cell>
+        <Cell><Data ss:Type="String">BILL-3408</Data></Cell>
+        <Cell><Data ss:Type="String">PartnerCo Inc.</Data></Cell>
+        <Cell><Data ss:Type="String">Standard reclass entry</Data></Cell>
+        <Cell><Data ss:Type="String">1200</Data></Cell>
+        <Cell><Data ss:Type="String">line detail</Data></Cell>
+        <Cell><Data ss:Type="Number">2923.77</Data></Cell>
+        <Cell><Data ss:Type="String">Jordan Kim</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">Journal</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-03-25T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="String">Mar 2024</Data></Cell>
+        <Cell><Data ss:Type="String">Standard</Data></Cell>
+        <Cell><Data ss:Type="String">JE-2902</Data></Cell>
+        <Cell><Data ss:Type="String">Global Solutions LLC</Data></Cell>
+        <Cell><Data ss:Type="String">Standard reclass entry</Data></Cell>
+        <Cell><Data ss:Type="String">1200</Data></Cell>
+        <Cell><Data ss:Type="String">line detail</Data></Cell>
+        <Cell><Data ss:Type="Number">7854.17</Data></Cell>
+        <Cell><Data ss:Type="String">Sam Patel</Data></Cell>
+        <Cell ss:Index="15"><Data ss:Type="String">PHANTOM-COL-15</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">Invoice</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-04-01T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="String">Apr 2024</Data></Cell>
+        <Cell><Data ss:Type="String">Standard</Data></Cell>
+        <Cell><Data ss:Type="String">INV-4514</Data></Cell>
+        <Cell><Data ss:Type="String">Global Solutions LLC</Data></Cell>
+        <Cell><Data ss:Type="String">Standard reclass entry</Data></Cell>
+        <Cell><Data ss:Type="String">4100</Data></Cell>
+        <Cell><Data ss:Type="String">line detail</Data></Cell>
+        <Cell><Data ss:Type="Number">1285.23</Data></Cell>
+        <Cell><Data ss:Type="String">Jordan Kim</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">Credit Memo</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-04-08T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="String">Apr 2024</Data></Cell>
+        <Cell><Data ss:Type="String">Standard</Data></Cell>
+        <Cell><Data ss:Type="String">CM-2590</Data></Cell>
+        <Cell><Data ss:Type="String">NorthStar Ltd.</Data></Cell>
+        <Cell><Data ss:Type="String">Standard reclass entry</Data></Cell>
+        <Cell><Data ss:Type="String">4100</Data></Cell>
+        <Cell><Data ss:Type="String">line detail</Data></Cell>
+        <Cell><Data ss:Type="Number">8013.23</Data></Cell>
+        <Cell><Data ss:Type="String">Sam Patel</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">Invoice</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-04-15T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="String">Apr 2024</Data></Cell>
+        <Cell><Data ss:Type="String">Standard</Data></Cell>
+        <Cell><Data ss:Type="String">INV-4126</Data></Cell>
+        <Cell><Data ss:Type="String">PartnerCo Inc.</Data></Cell>
+        <Cell><Data ss:Type="String">Standard reclass entry</Data></Cell>
+        <Cell><Data ss:Type="String">2010</Data></Cell>
+        <Cell><Data ss:Type="String">line detail</Data></Cell>
+        <Cell><Data ss:Type="Number">3209.92</Data></Cell>
+        <Cell><Data ss:Type="String">Jordan Kim</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">Invoice</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-04-22T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="String">Apr 2024</Data></Cell>
+        <Cell><Data ss:Type="String">Standard</Data></Cell>
+        <Cell><Data ss:Type="String">INV-6492</Data></Cell>
+        <Cell><Data ss:Type="String">NorthStar Ltd.</Data></Cell>
+        <Cell><Data ss:Type="String">Standard reclass entry</Data></Cell>
+        <Cell><Data ss:Type="String">1010</Data></Cell>
+        <Cell><Data ss:Type="String">line detail</Data></Cell>
+        <Cell><Data ss:Type="Number">5825.99</Data></Cell>
+        <Cell><Data ss:Type="String">Jordan Kim</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">Credit Memo</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-04-29T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="String">Apr 2024</Data></Cell>
+        <Cell><Data ss:Type="String">Standard</Data></Cell>
+        <Cell><Data ss:Type="String">CM-4933</Data></Cell>
+        <Cell><Data ss:Type="String">Acme Corp</Data></Cell>
+        <Cell><Data ss:Type="String">Standard reclass entry</Data></Cell>
+        <Cell><Data ss:Type="String">4000</Data></Cell>
+        <Cell><Data ss:Type="String">line detail</Data></Cell>
+        <Cell><Data ss:Type="Number">2021.44</Data></Cell>
+        <Cell><Data ss:Type="String">Alex Rivera</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">Bill</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-05-06T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="String">May 2024</Data></Cell>
+        <Cell><Data ss:Type="String">Standard</Data></Cell>
+        <Cell><Data ss:Type="String">BILL-9287</Data></Cell>
+        <Cell><Data ss:Type="String">PartnerCo Inc.</Data></Cell>
+        <Cell><Data ss:Type="String">Standard reclass entry</Data></Cell>
+        <Cell><Data ss:Type="String">1200</Data></Cell>
+        <Cell><Data ss:Type="String">line detail</Data></Cell>
+        <Cell><Data ss:Type="Number">6068.22</Data></Cell>
+        <Cell><Data ss:Type="String">Alex Rivera</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">Credit Memo</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-05-13T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="String">May 2024</Data></Cell>
+        <Cell><Data ss:Type="String">Standard</Data></Cell>
+        <Cell><Data ss:Type="String">CM-2120</Data></Cell>
+        <Cell><Data ss:Type="String">Global Solutions LLC</Data></Cell>
+        <Cell><Data ss:Type="String">Standard reclass entry</Data></Cell>
+        <Cell><Data ss:Type="String">1200</Data></Cell>
+        <Cell><Data ss:Type="String">line detail</Data></Cell>
+        <Cell><Data ss:Type="Number">7905.3</Data></Cell>
+        <Cell><Data ss:Type="String">Sam Patel</Data></Cell>
+      </Row>
+      <Row>
+        <Cell><Data ss:Type="String">Journal</Data></Cell>
+        <Cell><Data ss:Type="DateTime">2024-05-20T00:00:00</Data></Cell>
+        <Cell><Data ss:Type="String">May 2024</Data></Cell>
+        <Cell><Data ss:Type="String">Standard</Data></Cell>
+        <Cell><Data ss:Type="String">JE-1752</Data></Cell>
+        <Cell><Data ss:Type="String">Acme Corp</Data></Cell>
+        <Cell><Data ss:Type="String">Standard reclass entry</Data></Cell>
+        <Cell><Data ss:Type="String">2010</Data></Cell>
+        <Cell><Data ss:Type="String">line detail</Data></Cell>
+        <Cell><Data ss:Type="Number">7471.85</Data></Cell>
+        <Cell><Data ss:Type="String">Sam Patel</Data></Cell>
+      </Row>
+    </Table>
+  </Worksheet>
+</Workbook>
