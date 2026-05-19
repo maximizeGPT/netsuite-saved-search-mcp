@@ -11,18 +11,16 @@ from __future__ import annotations
 
 import difflib
 import os
-import statistics
-from datetime import date, datetime
+from datetime import date
 from pathlib import Path
 
+from .anomalies import detect_anomalies
 from .errors import ColumnNotFoundError, ExportNotFoundError, ParseError, PathTraversalError
 from .models import (
     AggregateResponse,
-    AnomalyResponse,
     CategorizeResponse,
     DateRange,
     ExportSummary,
-    Finding,
     HeadersResponse,
     Measure,
     Predicate,
@@ -298,168 +296,9 @@ def categorize_by_memo(
 
 
 # ---------------------------------------------------------------------------
-# Tool 6 — detect_anomalies.
+# Tool 6 — detect_anomalies (implementation lives in anomalies.py; the
+# re-export at the top of this file is the public tool entrypoint).
 # ---------------------------------------------------------------------------
-
-# Cap supporting_rows to keep findings small enough for an MCP response.
-_SUPPORTING_ROWS_CAP = 10
-
-# Period strings emitted by NetSuite look like "Jan 2024", "Sep 2024".
-_PERIOD_FORMATS: tuple[str, ...] = ("%b %Y", "%B %Y", "%Y-%m")
-
-
-def _parse_period(value: object) -> tuple[int, int] | None:
-    """Best-effort parse of a NetSuite period label into (year, month)."""
-    if value is None:
-        return None
-    s = str(value)
-    for fmt in _PERIOD_FORMATS:
-        try:
-            d = datetime.strptime(s, fmt)
-        except ValueError:
-            continue
-        return d.year, d.month
-    return None
-
-
-def _check_zero_activity_periods(
-    export: NetSuiteExport, period_column: str
-) -> list[Finding]:
-    parsed_periods: dict[tuple[int, int], str] = {}
-    for row in export.rows:
-        key = _parse_period(row[period_column])
-        if key is not None:
-            parsed_periods.setdefault(key, str(row[period_column]))
-    if not parsed_periods:
-        return []
-
-    keys = sorted(parsed_periods.keys())
-    (first_y, first_m), (last_y, last_m) = keys[0], keys[-1]
-
-    findings: list[Finding] = []
-    y, m = first_y, first_m
-    while (y, m) <= (last_y, last_m):
-        if (y, m) not in parsed_periods:
-            label = datetime(y, m, 1).strftime("%b %Y")
-            findings.append(
-                Finding(
-                    severity="HIGH",
-                    category="zero_activity_period",
-                    description=f"No rows recorded for {label}",
-                )
-            )
-        m += 1
-        if m > 12:
-            m, y = 1, y + 1
-    return findings
-
-
-def _check_ratio_anomalies(
-    export: NetSuiteExport,
-    account_column: str,
-    amount_column: str,
-    period_column: str,
-) -> list[Finding]:
-    totals: dict[tuple[str, str], float] = {}
-    for row in export.rows:
-        acc, per, amt = row[account_column], row[period_column], row[amount_column]
-        if acc is None or per is None:
-            continue
-        if not isinstance(amt, (int, float)) or isinstance(amt, bool):
-            continue
-        key = (str(acc), str(per))
-        totals[key] = totals.get(key, 0.0) + abs(float(amt))
-
-    per_account: dict[str, dict[str, float]] = {}
-    for (acc, per), total in totals.items():
-        per_account.setdefault(acc, {})[per] = total
-
-    findings: list[Finding] = []
-    for acc, period_totals in per_account.items():
-        if len(period_totals) < 3:
-            continue
-        values = sorted(period_totals.values())
-        median = values[len(values) // 2]
-        if median <= 0:
-            continue
-        for per, total in period_totals.items():
-            if total <= 2 * median:
-                continue
-            supporting = [
-                r
-                for r in export.rows
-                if str(r[account_column]) == acc and str(r[period_column]) == per
-            ][:_SUPPORTING_ROWS_CAP]
-            findings.append(
-                Finding(
-                    severity="MEDIUM",
-                    category="ratio_anomaly",
-                    description=(
-                        f"Account {acc} in {per} totals {total:,.2f} — "
-                        f"{total / median:.1f}x the {acc} median of {median:,.2f}"
-                    ),
-                    supporting_rows=supporting,
-                )
-            )
-    return findings
-
-
-def _check_document_count_variance(
-    export: NetSuiteExport, period_column: str
-) -> list[Finding]:
-    period_counts: dict[str, int] = {}
-    for row in export.rows:
-        per = row[period_column]
-        if per is None:
-            continue
-        period_counts[str(per)] = period_counts.get(str(per), 0) + 1
-    if len(period_counts) < 3:
-        return []
-
-    values = list(period_counts.values())
-    mean = statistics.mean(values)
-    stdev = statistics.stdev(values)
-    if stdev == 0:
-        return []
-
-    findings: list[Finding] = []
-    for per, count in period_counts.items():
-        z = (count - mean) / stdev
-        if abs(z) <= 2:
-            continue
-        findings.append(
-            Finding(
-                severity="MEDIUM",
-                category="document_count_variance",
-                description=(
-                    f"Period {per} has {count} documents "
-                    f"({z:+.1f} stdev from mean of {mean:.1f})"
-                ),
-            )
-        )
-    return findings
-
-
-def detect_anomalies(
-    file_path: str,
-    account_column: str,
-    amount_column: str,
-    period_column: str,
-) -> AnomalyResponse:
-    """Run three anomaly checks against the parsed export."""
-    path = _resolve_file(file_path)
-    export = _get_export(path)
-    _validate_projection(
-        [account_column, amount_column, period_column], export.headers
-    )
-
-    findings: list[Finding] = []
-    findings.extend(_check_zero_activity_periods(export, period_column))
-    findings.extend(
-        _check_ratio_anomalies(export, account_column, amount_column, period_column)
-    )
-    findings.extend(_check_document_count_variance(export, period_column))
-    return AnomalyResponse(findings=findings)
 
 
 # ---------------------------------------------------------------------------

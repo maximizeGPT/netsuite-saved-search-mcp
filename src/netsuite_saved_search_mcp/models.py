@@ -3,14 +3,15 @@
 Kept narrow on purpose: each model describes exactly what a tool emits.
 Predicate and Measure live in parser.py and are re-exported here so the
 tool layer offers one import surface for the agent-facing schema.
+Anomaly findings live in anomalies.py to keep that module self-contained.
 """
 
 from __future__ import annotations
 
 from datetime import date
-from typing import Any, Literal
+from typing import Any
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict
 
 from .parser import (
     ComparePredicate,
@@ -24,7 +25,6 @@ from .parser import (
 
 __all__ = [
     "AggregateResponse",
-    "AnomalyResponse",
     "CategorizeResponse",
     "ComparePredicate",
     "ContainsPredicate",
@@ -32,7 +32,6 @@ __all__ = [
     "DateRangePredicate",
     "EqPredicate",
     "ExportSummary",
-    "Finding",
     "HeadersResponse",
     "Measure",
     "Predicate",
@@ -81,14 +80,3 @@ class AggregateResponse(_ResponseBase):
 class CategorizeResponse(_ResponseBase):
     rows: list[dict[str, Any]]
     breakdown: dict[str, int]
-
-
-class Finding(_ResponseBase):
-    severity: Literal["HIGH", "MEDIUM", "LOW"]
-    category: str
-    description: str
-    supporting_rows: list[dict[str, Any]] = Field(default_factory=list)
-
-
-class AnomalyResponse(_ResponseBase):
-    findings: list[Finding]
