@@ -210,7 +210,8 @@ def query_export(
     """Filter rows, optionally project columns, cap the result size.
 
     The implicit limit is DEFAULT_QUERY_LIMIT (1000). Pass limit=0 to
-    return only the total_matched count with no rows.
+    get a count without fetching rows; response.rows will be empty,
+    total_matched and truncated will reflect the full match.
     """
     path = _resolve_file(file_path)
     export = _get_export(path)
