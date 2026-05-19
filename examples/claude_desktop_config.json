@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "netsuite-saved-search": {
+      "command": "uvx",
+      "args": ["netsuite-saved-search-mcp"],
+      "env": {
+        "NSMCP_ROOT": "/Users/you/netsuite-exports",
+        "NSMCP_LOG_LEVEL": "INFO"
+      }
+    }
+  }
+}
