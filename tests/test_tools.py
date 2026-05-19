@@ -514,6 +514,9 @@ def test_detect_anomalies_flags_september_ratio_for_account_1200(root: Path) -> 
     assert matched, f"expected 1200/Sep anomaly, got: {[f.description for f in ratio]}"
     assert matched[0].supporting_rows  # at least one row attached
     assert len(matched[0].supporting_rows) <= 10
+    # total_supporting_count must reflect the true count, not the cap.
+    assert matched[0].total_supporting_count >= len(matched[0].supporting_rows)
+    assert matched[0].total_supporting_count > 10  # we seeded 12+ rows
 
 
 def test_detect_anomalies_flags_september_document_count(root: Path) -> None:
