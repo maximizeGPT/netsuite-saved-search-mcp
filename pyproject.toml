@@ -5,19 +5,19 @@ build-backend = "hatchling.build"
 [project]
 name = "netsuite-saved-search-mcp"
 version = "0.1.0"
-description = "MCP server exposing NetSuite saved-search XML exports as a structured query interface."
+description = "MCP server exposing NetSuite saved search exports as a structured query interface for Claude"
 readme = "README.md"
 requires-python = ">=3.12"
-license = { text = "MIT" }
-authors = [{ name = "Mohammed Wasif" }]
-keywords = ["mcp", "netsuite", "saved-search", "claude", "xml", "spreadsheetml"]
+license = {text = "MIT"}
+authors = [{name = "Mohammed Wasif"}]
+keywords = ["mcp", "model-context-protocol", "netsuite", "claude", "finance"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
-    "Intended Audience :: Financial and Insurance Industry",
     "License :: OSI Approved :: MIT License",
-    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3 :: Only",
     "Topic :: Office/Business :: Financial :: Accounting",
 ]
 dependencies = [
@@ -26,6 +26,11 @@ dependencies = [
     "python-dateutil>=2.9",
     "pydantic>=2.6",
 ]
+
+[project.urls]
+Homepage = "https://github.com/maximizeGPT/netsuite-saved-search-mcp"
+Repository = "https://github.com/maximizeGPT/netsuite-saved-search-mcp"
+Issues = "https://github.com/maximizeGPT/netsuite-saved-search-mcp/issues"
 
 [project.scripts]
 netsuite-saved-search-mcp = "netsuite_saved_search_mcp.server:main"
