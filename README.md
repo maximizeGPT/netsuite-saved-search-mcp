@@ -1,8 +1,39 @@
 # netsuite-saved-search-mcp
 
+[![CI](https://github.com/maximizeGPT/netsuite-saved-search-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/maximizeGPT/netsuite-saved-search-mcp/actions/workflows/ci.yml)
 [![PyPI version](https://badge.fury.io/py/netsuite-saved-search-mcp.svg)](https://pypi.org/project/netsuite-saved-search-mcp/)
+[![Release](https://img.shields.io/github/v/release/maximizeGPT/netsuite-saved-search-mcp?include_prereleases&sort=semver)](https://github.com/maximizeGPT/netsuite-saved-search-mcp/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 
 NetSuite saved search exports look like Excel files but are actually XML SpreadsheetML with a .xls extension — Excel opens them, pandas trips on them, and most teams writing Claude integrations against NetSuite end up rebuilding the same parser by hand. This MCP server exposes those exports as a structured query interface for Claude: discover files, inspect columns, filter and aggregate rows, categorize by memo keywords, surface anomalies. Seven tools wrap a parser that handles the format's real quirks — entity-encoded text, empty cells flagged with `ss:Index`, drifting column layouts between saved searches, DateTime cells that won't parse. The parser runs in lxml's recovery mode and reports broken cells as structured warnings rather than crashing on them.
+
+## What an auditable agent run looks like
+
+A condensed exchange from [`examples/walkthrough.md`](examples/walkthrough.md).
+The agent's tool calls are auditable, the parser's row IDs are
+citable, and the model never has to fabricate numbers it can't
+point at.
+
+```
+user      What GL accounts had unusual activity last quarter?
+
+agent     → get_headers(file_path="Q3_GL.xls")
+          ← {header_row: 0, columns: ["Date","Account","Amount","Memo"], row_count: 212}
+
+agent     → detect_anomalies(file_path="Q3_GL.xls",
+                             account_column="Account",
+                             amount_column="Amount",
+                             period_column="Date")
+          ← [{level:"HIGH", type:"zero_activity",
+              account:"1200", period:"Jun 2024", row_ids:[]},
+             {level:"MEDIUM", type:"ratio_anomaly",
+              account:"4000", period:"Sep 2024", multiple:3.1, row_ids:[145..157]}]
+
+agent     Account 1200 had zero activity in June 2024 (HIGH — gap in the
+          GL). Account 4000 spiked 3.1× in September (MEDIUM — rows
+          145–157). Both surfaced by `detect_anomalies`; row IDs are
+          quotable for audit.
+```
 
 ## Quick start
 

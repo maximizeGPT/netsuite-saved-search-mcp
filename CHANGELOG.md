@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Added
+- README badges row: CI / PyPI / GitHub release / MIT license.
+- README "What an auditable agent run looks like" — condensed 4-turn
+  worked example showing tool-cited row IDs, before the deep walkthrough.
+- `CODE_OF_CONDUCT.md` (Contributor Covenant 2.1).
+- `CONTRIBUTING.md` — setup, tests, useful-bug-report shape, code style.
+- `SECURITY.md` — supported versions + reporting via rayedwasif@hotmail.com.
+- `.github/ISSUE_TEMPLATE/{bug_report.md, feature_request.md}` —
+  bug template requires the MCP server log + sanitized fixture.
+- `.github/PULL_REQUEST_TEMPLATE.md` — pytest / ruff / mypy / changelog /
+  tool-table checklist.
+- `tests/fixtures/README.md` — documents what each of the three
+  sanitized fixtures tests (clean GL, metadata-block, malformed-recovery).
+
 ## [0.1.1] — 2026-05-19
 
 ### Changed
