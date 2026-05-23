@@ -5,7 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
-## [Unreleased]
+## [0.1.3] — 2026-05-23
+
+### Changed
+- "What an auditable agent run looks like" worked transcript now uses real data reproduced from the [`claude-eval-harness`](https://github.com/maximizeGPT/claude-eval-harness) `anomaly_zero_activity_june` case (`runs/baseline-sonnet-4-6.json`) instead of an illustrative one, closing the credibility gap with the sibling eval-harness repo.
+
+### Added
+- README "Standalone Python usage" section — surfaces that `NetSuiteExport` is usable directly from `from netsuite_saved_search_mcp.parser import NetSuiteExport` without the MCP transport. Useful for notebooks, batch scripts, pytest fixtures.
+- README "Security boundary" section — documents `NSMCP_ROOT` enforcement, `_resolve_under_root` symlink-escape protection (hyperlinked to the implementation in `src/`), and the no-writes / no-network / scoped-stderr-logs guarantees that an audit audience needs as a Section 1 concern. Complements (does not replace) `SECURITY.md`.
+- README Limitations: three new honest items — `detect_anomalies` period-label format constraint, unbounded parsed-export cache caveat, fixture-only test-coverage scope.
+
+### Fixed
+- Stale `__version__ = "0.1.0"` in `src/netsuite_saved_search_mcp/__init__.py` (the v0.1.1 release bumped only `pyproject.toml`). Now tracks `pyproject.toml`.
+
+## [0.1.2] — 2026-05-23
 
 ### Added
 - README badges row: CI / PyPI / GitHub release / MIT license.
